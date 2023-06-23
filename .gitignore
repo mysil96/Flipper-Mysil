@@ -82,3 +82,7 @@ assets/dolphin/custom/*
 !assets/dolphin/custom/WatchDogs/
 !assets/dolphin/custom/ReadMe.md
 assets/resources/dolphin_custom/
+assets/resources/badkb/Payloads
+assets/resources/subghz/Jamming
+MYSIL-X/
+*.tgz
