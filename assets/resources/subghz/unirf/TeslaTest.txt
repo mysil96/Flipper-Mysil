@@ -1,0 +1,10 @@
+UP: /ext/subghz/Vehicles/Tesla/433_Tesla_AM650_EU_AUS.sub
+DOWN: /ext/subghz/Vehicles/Tesla/433_Tesla_AM270_EU_AUS.sub
+LEFT: /ext/subghz/Vehicles/Tesla/433_Tesla_Captured_EU_AUS.sub
+RIGHT: /ext/subghz/Vehicles/Tesla/433b_Tesla_Captured_EU_AUS.sub
+OK: /ext/subghz/Vehicles/Tesla/Tesla_Captured.sub
+ULABEL: V1
+DLABEL: V2
+LLABEL: V3
+RLABEL: V4
+OKLABEL: V5

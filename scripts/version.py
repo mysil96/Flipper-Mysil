@@ -1,5 +1,5 @@
 #!/usb/bin/env python3
-VERSION = "XFW-0048"
+VERSION = "MYSIL"
 
 import json
 import os

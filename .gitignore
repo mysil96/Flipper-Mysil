@@ -86,3 +86,4 @@ assets/resources/badkb/Payloads
 assets/resources/subghz/Jamming
 MYSIL-X/
 *.tgz
+assets/resources/nfc/*.nfc
