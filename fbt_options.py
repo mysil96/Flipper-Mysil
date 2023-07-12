@@ -3,6 +3,7 @@ import posixpath
 
 # For more details on these options, run 'fbt -h'
 
+
 FIRMWARE_ORIGIN = "MYSIL"
 
 # Default hardware target
