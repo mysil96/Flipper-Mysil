@@ -5,6 +5,7 @@ import posixpath
 
 FIRMWARE_ORIGIN = "MYSIL"
 
+
 # Default hardware target
 TARGET_HW = 7
 
