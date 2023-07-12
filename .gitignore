@@ -43,7 +43,7 @@ null.d
 
 
 # Visual Studio Code
-/.vscode
+#/.vscode
 
 # Visual Studio
 /.vs

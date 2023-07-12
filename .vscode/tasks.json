@@ -1,0 +1,245 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "CLEANUP",
+            "group": "build",
+            "type": "shell",
+            "command": "./fbt updater_package -c"
+        },
+        {
+            "label": "COMPILE",
+            "group": "build",
+            "type": "shell",
+            "command": "./fbt icons proto dolphin_internal dolphin_blocking dolphin_ext resources"
+        },
+        {
+            "label": "COMMIT Test",
+            "group": "build",
+            "type": "shell",
+            "command": "GPT: Commit"
+        },
+        {
+            "label": "[Release] Build bundle",
+            "group": "build",
+            "type": "shell",
+            "command": "./fbt updater_package COMPACT=1 DEBUG=0"
+        },
+        {
+            "label": "[Release] Build",
+            "group": "build",
+            "type": "shell",
+            "command": "./fbt COMPACT=1 DEBUG=0",
+            "options": {
+                "statusbar": {"hide" : true }}
+        },
+        {
+            "label": "[Release] BASH",
+            "group": "build",
+            "type": "shell",
+            "command": "./BuildRelease.sh"
+        },
+        {
+            "label": "Get Blackmagic Host",
+            "group": "build",
+            "type": "shell",
+            "command": "./fbt get_blackmagic"
+        },
+        {
+            "label": "[Release] Flash (ST-Link)",
+            "group": "build",
+            "type": "shell",
+            "command": "./fbt COMPACT=1 DEBUG=0 FORCE=1 flash",
+            "options": {
+                "statusbar": {"hide" : true }}
+        },
+        {
+            "label": "[Debug] Flash (ST-Link)",
+            "group": "build",
+            "type": "shell",
+            "command": "./fbt FORCE=1 flash",
+            "options": {
+                "statusbar": {"hide" : true }}
+        },
+        {
+            "label": "[Release] Flash (blackmagic)",
+            "group": "build",
+            "type": "shell",
+            "command": "./fbt COMPACT=1 DEBUG=0 FORCE=1 flash_blackmagic"
+        },
+        {
+            "label": "[Debug] Flash (blackmagic)",
+            "group": "build",
+            "type": "shell",
+            "command": "./fbt FORCE=1 flash_blackmagic",
+            "options": {
+                "statusbar": {"hide" : true }}
+        },
+        {
+            "label": "[Release] Flash (JLink)",
+            "group": "build",
+            "type": "shell",
+            "command": "./fbt COMPACT=1 DEBUG=0 FORCE=1 jflash",
+            "options": {
+                "statusbar": {"hide" : true }}
+        },
+        {
+            "label": "[Debug] Flash (JLink)",
+            "group": "build",
+            "type": "shell",
+            "command": "./fbt FORCE=1 jflash",
+            "options": {
+                "statusbar": {"hide" : true }}
+        },
+        {
+            "label": "[Debug] Build update bundle",
+            "group": "build",
+            "type": "shell",
+            "command": "./fbt updater_package DEBUG=1",
+            "options": {
+                "statusbar": {"hide" : true }}
+        },
+        {
+            "label": "[Release] Build updater",
+            "group": "build",
+            "type": "shell",
+            "command": "./fbt updater_all COMPACT=1 DEBUG=0",
+            "options": {
+                "statusbar": {"hide" : true }}
+        },
+        {
+            "label": "[Debug] Build updater",
+            "group": "build",
+            "type": "shell",
+            "command": "./fbt updater_all",
+            "options": {
+                "statusbar": {"hide" : true }}
+        },
+        {
+            "label": "[Debug] Flash (USB, w/o resources)",
+            "group": "build",
+            "type": "shell",
+            "command": "./fbt FORCE=1 flash_usb",
+            "options": {
+                "statusbar": {"hide" : true }}
+        },
+        {
+            "label": "[Release] Flash USB - resources",
+            "group": "build",
+            "type": "shell",
+            "command": "./fbt COMPACT=1 DEBUG=0 FORCE=1 flash_usb"
+        },
+        {
+            "label": "[Debug:unit_tests] Flash (USB)",
+            "group": "build",
+            "type": "shell",
+            "command": "./fbt FIRMWARE_APP_SET=unit_tests FORCE=1 flash_usb",
+            "options": {
+                "statusbar": {"hide" : true }}
+        },
+        {
+            "label": "[Debug] Flash (USB, with resources)",
+            "group": "build",
+            "type": "shell",
+            "command": "./fbt FORCE=1 flash_usb_full",
+            "options": {
+                "statusbar": {"hide" : true }}
+        },
+        {
+            "label": "[Release] Flash USB + resources",
+            "group": "build",
+            "type": "shell",
+            "command": "./fbt COMPACT=1 DEBUG=0 FORCE=1 flash_usb_full"
+        },
+        {
+            "label": "[Debug] Create PVS-Studio report",
+            "group": "build",
+            "type": "shell",
+            "command": "./fbt firmware_pvs",
+            "options": {
+                "statusbar": {"hide" : true }}
+        },
+        {
+            "label": "[Debug] Build FAPs",
+            "group": "build",
+            "type": "shell",
+            "command": "./fbt fap_dist",
+            "options": {
+                "statusbar": {"hide" : true }}
+        },
+        {
+            "label": "[Release] Build FAPs",
+            "group": "build",
+            "type": "shell",
+            "command": "./fbt COMPACT=1 DEBUG=0 fap_dist",
+            "options": {
+                "statusbar": {"hide" : true }}
+        },
+        {
+            "label": "[Debug] Launch App on Flipper",
+            "group": "build",
+            "type": "shell",
+            "command": "./fbt launch_app APPSRC=${relativeFileDirname}",
+            "options": {
+                "statusbar": {"hide" : true }}
+        },
+        {
+            "label": "[Release] Launch App on Flipper",
+            "group": "build",
+            "type": "shell",
+            "command": "./fbt COMPACT=1 DEBUG=0 launch_app APPSRC=${relativeFileDirname}",
+            "options": {
+                "statusbar": {"hide" : true }}
+        },
+        {
+            "label": "[Debug] Launch App on Flipper with Serial Console",
+            "dependsOrder": "sequence",
+            "group": "build",
+            "dependsOn": [
+                "[Debug] Launch App on Flipper",
+                "Serial Console"
+            ],
+            "options": {
+                "statusbar": {"hide" : true }}
+        },
+        {
+            "label": "[Debug] Build and upload all FAPs to Flipper over USB",
+            "group": "build",
+            "type": "shell",
+            "command": "./fbt fap_deploy",
+            "options": {
+                "statusbar": {"hide" : true }}
+        },
+        {
+            "label": "[Release] Build FAPs to USB",
+            "group": "build",
+            "type": "shell",
+            "command": "./fbt COMPACT=1 DEBUG=0 fap_deploy"
+        },
+        {
+            // Press Ctrl+] to quit
+            "label": "Serial Console",
+            "type": "shell",
+            "command": "./fbt cli",
+            "group": "none",
+            "isBackground": true,
+            "options": {
+                "env": {
+                    "FBT_NO_SYNC": "0"
+                }
+            },
+            "presentation": {
+                "reveal": "always",
+                "revealProblems": "never",
+                "showReuseMessage": false,
+                "panel": "dedicated",
+                "focus": true,
+                "echo": true,
+                "close": true,
+                "group": "Logger"
+            }
+        }
+    ]
+}
