@@ -10,7 +10,8 @@
 		"zxh404.vscode-proto3",
 		"augustocdias.tasks-shell-input",
 		"actboy168.tasks",
-		"rioj7.command-variable"
+		"rioj7.command-variable",
+		"michaelcurrin.auto-commit-msg"
 	],
 	// List of extensions recommended by VS Code that should not be recommended for users of this workspace.
 	"unwantedRecommendations": [
