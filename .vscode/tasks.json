@@ -19,7 +19,7 @@
             "label": "[Release] Build bundle",
             "group": "build",
             "type": "shell",
-            "command": "./fbt updater_package COMPACT=1 DEBUG=0"
+            "command": "./fbt updater_package"
         },
         {
             "label": "[Release] Build",
