@@ -16,12 +16,6 @@
             "command": "./fbt icons proto dolphin_internal dolphin_blocking dolphin_ext resources"
         },
         {
-            "label": "COMMIT Test",
-            "group": "build",
-            "type": "shell",
-            "command": "GPT: Commit"
-        },
-        {
             "label": "[Release] Build bundle",
             "group": "build",
             "type": "shell",
