@@ -1,0 +1,14 @@
+Filetype: IR signals file
+Version: 1
+# 
+name: Power
+type: parsed
+protocol: Samsung32
+address: 07 00 00 00
+command: 02 00 00 00
+# 
+name: Off
+type: parsed
+protocol: Samsung32
+address: 07 00 00 00
+command: 98 00 00 00
