@@ -4,7 +4,7 @@ import datetime
 
 # For more details on these options, run 'fbt -h'
 
-FIRMWARE_ORIGIN = "Xtreme"
+FIRMWARE_ORIGIN = "MYSIL"
 
 # Default hardware target
 TARGET_HW = 7
@@ -19,7 +19,7 @@ DEBUG = 0
 # If OS environment has DIST_SUFFIX set, it will be used instead
 
 # How about we add the timestamp automatically. Solves some problems
-DIST_SUFFIX = f"XFW-0049_{datetime.datetime.today().strftime('%d%m%Y')}"
+DIST_SUFFIX = f"MYSIL-X_{datetime.datetime.today().strftime('%d%m%Y')}"
 
 # Coprocessor firmware
 COPRO_OB_DATA = "scripts/ob.data"

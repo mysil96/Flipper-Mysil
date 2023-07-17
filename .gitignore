@@ -43,7 +43,7 @@ null.d
 
 
 # Visual Studio Code
-/.vscode
+#/.vscode
 
 # Visual Studio
 /.vs
@@ -77,8 +77,10 @@ deployments/
 commitnotes.md
 fbt_options.py
 
-# Asset packs
-assets/dolphin/custom/*
-!assets/dolphin/custom/WatchDogs/
-!assets/dolphin/custom/ReadMe.md
+# Custom ignore
 assets/resources/dolphin_custom/
+assets/resources/badkb/Payloads
+assets/resources/subghz/Jamming
+MYSIL-X/
+*.tgz
+assets/resources/nfc/*.nfc
