@@ -81,6 +81,6 @@ fbt_options.py
 assets/resources/dolphin_custom/
 assets/resources/badkb/Payloads
 assets/resources/subghz/Jamming
-MYSIL-X/
+MYSIL-X*
 *.tgz
 assets/resources/nfc/*.nfc
