@@ -84,3 +84,4 @@ assets/resources/subghz/Jamming
 MYSIL-X*
 *.tgz
 assets/resources/nfc/*.nfc
+/assets/resources
